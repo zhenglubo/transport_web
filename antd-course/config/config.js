@@ -1,8 +1,9 @@
 export default {
     plugins: [
       ['umi-plugin-react', {
-        antd: true
-        // 这里暂时还没有添加配置，该插件还不会有作用，我们会在后面的课程按照需求打开相应的配置
+        antd: true,
+        dva: true,
+        
       }],
     ],
     routes: [{
@@ -11,11 +12,17 @@ export default {
       routes: [
         {
           path: '/',
-          component: 'Helloworld',
+          component: 'User/User',
         },
         {
-          path: '/helloworld',
-          component: 'Helloworld'
+          path: '/user/user',
+          component: 'User/User'
+        },
+        {
+          path:'/order',
+          routes:[
+            {path:'/order/order',component:'Order/Order'}
+          ]
         },
         {
           path:'/analyse',
@@ -28,7 +35,8 @@ export default {
             },
             {
               path:'/analyse/cc',component:'Analyse/Cc'
-            }
+            },
+            
           ]
         }
       ]

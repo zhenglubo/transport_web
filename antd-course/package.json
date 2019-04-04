@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "umi dev",
-    "build": "umi build"
+    "build": "umi build && npm run functions:build"
   },
   "keywords": [],
   "author": "",
